@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+Keep the Timmy token dashboard as a single scrollable root page with in-page anchors, since the experience is intentionally one-page.
