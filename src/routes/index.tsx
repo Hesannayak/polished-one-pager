@@ -1,19 +1,15 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  ArrowDownRight,
   ArrowUpRight,
   Activity,
   Check,
   ChevronRight,
-  CircleDot,
   Copy,
   ExternalLink,
   MessageCircle,
   ShieldCheck,
-  TrendingUp,
   Users,
-  Wallet,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -153,7 +149,7 @@ function Index() {
             <div className="voice-divider" />
             <div className="voice-stat-row"><span>COMMUNITY AUTHORS</span><b>16</b></div>
             <div className="voice-stat-row"><span>THESIS POSTS · 24H</span><b>9</b></div>
-            <div className="voice-chart"><span style={{ height: "29%" }} /><span style={{ height: "45%" }} /><span style={{ height: "36%" }} /><span style={{ height: "56%" }} /><span style={{ height: "43%" }} /><span style={{ height: "70%" }} /><span style={{ height: "53%" }} /><span style={{ height: "85%" }} /><span style={{ height: "63%" }} /><span style={{ height: "100%" }} /><span style={{ height: "69%" }} /><span style={{ height: "82%" }} /><span style={{ height: "57%" }} /><span style={{ height: "74%" }} /></div>
+            <div className="voice-chart"><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /></div>
             <div className="voice-chart-labels"><span>12H AGO</span><span>NOW</span></div>
           </div>
           <div className="posts-panel">
@@ -191,7 +187,7 @@ function SignalItem({ text, rank, positive = false }: { text: string; rank: stri
   return <div className="signal-item"><span className={`signal-bullet${positive ? " positive-bullet" : ""}`} /> <p>{text}</p><span className={`signal-rank${positive ? " rank-positive" : ""}`}>{rank}</span></div>;
 }
 
-function ScoreCard({ label, tag, value, tone }: { label: string; tag: string; value?: string; tone: string; detail: string }) {
+function ScoreCard({ label, tag, value, tone }: { label: string; tag: string; value?: string; tone: string }) {
   const detail = label === "HANDS" ? "10 holders · flat today" : label === "NOISE" ? "9 authors posting in 24h" : label === "CULT" ? "Community identity signals" : "No recent dev sells";
   return <div className="score-card"><div className="score-card-top"><span>{label}</span>{value && <b>{value}</b>}</div><span className={`score-tag ${tone}`}>{tag}</span><p>{detail}</p></div>;
 }
